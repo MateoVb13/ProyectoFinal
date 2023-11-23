@@ -4,22 +4,22 @@ function iniciarSesion() {
 
     var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-// Usuario predeterminado con rol "Administrador"
-var usuarioAdministrador = {
-    usuario: "admin",
-    password: "admin123",
-    rol: "Administrador"
-};
+    // Usuario predeterminado con rol "Administrador"
+    var usuarioAdministrador = {
+        usuario: "admin",
+        password: "admin123",
+        rol: "Administrador"
+    };
 
-// Agregar el usuario predeterminado solo si no existe ya en la lista
-var usuarioExistente = usuarios.find(function (user) {
-    return user.usuario === usuarioAdministrador.usuario;
-});
+    // Agregar el usuario predeterminado solo si no existe ya en la lista
+    var usuarioExistente = usuarios.find(function (user) {
+        return user.usuario === usuarioAdministrador.usuario;
+    });
 
-if (!usuarioExistente) {
-    usuarios.push(usuarioAdministrador);
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
-}
+    if (!usuarioExistente) {
+        usuarios.push(usuarioAdministrador);
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    }
 
     // Verificar las credenciales del usuario ingresado
     var encontrado = usuarios.some(function (user) {
