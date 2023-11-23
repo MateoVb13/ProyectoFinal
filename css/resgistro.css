@@ -6,6 +6,18 @@ body {
     text-align: center;
 }
 
+header{
+    background-image: url(../recursos/imagenes/fondo.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    -webkit-text-stroke: 0.8px black;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
+}
+
 .container {
     width: 300px;
     margin: 100px auto;
@@ -27,7 +39,7 @@ input {
 }
 
 button {
-    background-color: #3498db;
+    background-color: #1f851a;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -36,5 +48,22 @@ button {
 }
 
 button:hover {
-    background-color: #2980b9;
+    background-color: #1f851a;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+    background-color: #1f851a;
+    padding: 15px 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
 }
