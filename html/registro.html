@@ -23,16 +23,47 @@
     <div class="container">
         <h2>Registro de Usuario</h2>
         <form id="registroForm">
-            <label for="usuario">Usuario:</label>
+            <label for="usuario">Nombre:</label>
             <input type="text" id="usuario" required>
-
+    
+            <label for="apellido">Apellidos:</label>
+            <input type="text" id="apellido" required>
+    
+            <label for="tipoId">Tipo de identificación:</label>
+            <select name="tipoIdentficacion" id="tipoId">
+            <option value="">Seleccione el tipo de documento</option>
+            <option value="CC">Cedula de Ciudadania</option>
+            <option value="TI">Tarjeta de Identidad</option>
+            <option value="CE">Cedula Extrangera</option>
+            <option value="P">Pasaporte</option>
+        </select><br><br>
+    
+            <label for="numId">Número de identificación:</label>
+            <input type="text" id="numId" required>
+    
+            <label for="direccion">Dirección residencia:</label>
+            <input type="text" id="direccion" required>
+    
+            <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fechaNacimiento" required>
+    
+            <label for="estudios">Estudios realizados:</label>
+            <select name="estudiosRealizados" id="estudios">
+                <option value="">Seleccione el tipo</option>
+                <option value="Bachiller">Bachiller</option>
+                <option value="Pregrado">Pregrado</option>
+                <option value="Posgrado">Posgrado</option>
+            </select><br><br>
+    
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" required>
+    
             <label for="password">Contraseña:</label>
             <input type="password" id="password" required>
-
+    
             <button type="button" onclick="registrar()">Registrar</button>
         </form>
     </div>
-
 
     <script src="../js/registros.js"></script>
 </body>

@@ -1,8 +1,16 @@
 function registrar() {
     var usuario = document.getElementById("usuario").value;
     var password = document.getElementById("password").value;
+    var apellido = document.getElementById("apellido").value;
+    var tipoId = document.getElementById("tipoId").value;
+    var numId = document.getElementById("numId").value;
+    var direccion = document.getElementById("direccion").value;
+    var fechaNacimiento = document.getElementById("FechaNacimiento").value;
+    var estudios = document.getElementById("estudios").value;
+    var email = document.getElementById("email").value;
 
-    var nuevoUsuario = { usuario: usuario, password: password };
+    var nuevoUsuario = { usuario: usuario, password: password, apellido: apellido, tipoId: tipoId, numId: numId, direccion: direccion,
+    fechaNacimiento: fechaNacimiento, estudios: estudios, email: email};
 
     var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
     usuarios.push(nuevoUsuario);
