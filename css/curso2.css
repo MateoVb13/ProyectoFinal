@@ -60,7 +60,50 @@ header h1 {
     width: 100%;
     max-width: 400px;
     border-radius: 8px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+}
+
+.temas ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.temas li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red-social {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.red-social a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+.red-social img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.red-social p {
+    margin: 0;
 }
 
 nav ul {
