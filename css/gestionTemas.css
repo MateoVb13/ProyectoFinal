@@ -1,0 +1,91 @@
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.header-academico {
+    background-image: url('header-bg.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.header-title {
+    font-size: 36px;
+    margin: 0;
+}
+
+.temas-container {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.temas-title {
+    font-size: 28px;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.temas-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.temas-table th,
+.temas-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.temas-table th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.agregar-tema-form {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.agregar-tema-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.agregar-tema-form input,
+.agregar-tema-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.agregar-tema-form .btn {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.agregar-tema-form .btn:hover {
+    background-color: #2576b7;
+}
