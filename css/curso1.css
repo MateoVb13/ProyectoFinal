@@ -32,11 +32,14 @@ header h1 {
     max-width: 400px;
     border-radius: 8px;
     margin-bottom: 20px;
+    margin: 0 auto;
+    display: block;
+    
 }
 
 .btn {
     display: inline-block;
-    background-color: #3498db;
+    background-color: #1f851a;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -57,7 +60,7 @@ header h1 {
 }
 
 .instructor img {
-    width: 100%;
+    width: 150px;
     max-width: 400px;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -109,7 +112,7 @@ footer {
 nav ul {
     list-style: none;
     text-align: center;
-    background-color: #3498db;
+    background-color: #1f851a;
     padding: 10px 0;
 }
 
