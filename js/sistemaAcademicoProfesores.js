@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Datos simulados (puedes reemplazarlos con datos reales)
-
+    const cursos = ["Curso de Diseño Web", "Curso de Programación en Python", "Curso de Marketing Digital", "Curso de Ciencia de Datos"];
+    const estudiantes = ["Juan Perez", "Maria Rodriguez", "Carlos Gomez", "Abrahan Badel", "Juan Morales", "Mateo Villalobos"];
 
     // Elementos del DOM
     const listaCursos = document.getElementById("lista-cursos");

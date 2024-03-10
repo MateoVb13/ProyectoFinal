@@ -1,23 +1,45 @@
 function iniciarSesion() {
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    var usuario = document.getElementById("usuario").value;
+    var password = document.getElementById("password").value;
 
-    // Verificar si el usuario es un estudiante
-    if (username === "estudiante" && password === "1234") {
-        alert("Iniciaste sesión como estudiante. Redirigiendo a la página de estudiante...");
-        window.location.href = "sistemaAcademicoEstudiantes.html";
+    var usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    // Usuario predeterminado con rol "Administrador"
+    var usuarioAdministrador = {
+        usuario: "admin",
+        password: "admin123",
+        rol: "Administrador"
+    };
+
+    // Agregar el usuario predeterminado solo si no existe ya en la lista
+    var usuarioExistente = usuarios.find(function (user) {
+        return user.usuario === usuarioAdministrador.usuario;
+    });
+
+    if (!usuarioExistente) {
+        usuarios.push(usuarioAdministrador);
+        localStorage.setItem("usuarios", JSON.stringify(usuarios));
     }
-    // Verificar si el usuario es un profesor
-    else if (username === "profesor" && password === "5678") {
-        alert("Iniciaste sesión como profesor. Redirigiendo a la página de profesor...");
-        window.location.href = "sistemaAcademicoProfesores.html";
-    }
-    // Verificar si el usuario es un administrador
-    else if (username === "admin" && password === "admin123") {
-        alert("Iniciaste sesión como administrador. Redirigiendo a la página de administrador...");
-        window.location.href = "panelAdministradores.html";
+
+    // Verificar las credenciales del usuario ingresado
+    var encontrado = usuarios.some(function (user) {
+        return user.usuario === usuario && user.password === password;
+    });
+
+    if (encontrado) {
+        var rolUsuario = usuarios.find(function (user) {
+            return user.usuario === usuario;
+        }).rol;
+
+        // Redirigir a la página correspondiente según el rol del usuario
+        if (rolUsuario === "Profesor") {
+            window.location.href = "sistemaAcademicoProfesores.html";
+        } else if (rolUsuario === "Administrador") {
+            window.location.href = "panelAdministradores.html";
+        } else {
+            window.location.href = "sistemaAcademicoEstudiantes.html";
+        }
     } else {
-        alert("Usuario o contraseña incorrectos. Por favor, inténtalo de nuevo.");
+        alert("Usuario o contraseña incorrectos. Inténtalo de nuevo.");
     }
 }
-

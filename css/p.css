@@ -26,8 +26,8 @@ header h1 {
 nav ul {
     list-style: none;
     text-align: center;
-    background-color: #3498db;
-    padding: 10px 0;
+    background-color: #1f851a;
+    padding: 15px 0;
 }
 
 nav li {
@@ -68,6 +68,7 @@ h2 {
 
 .curso h3 {
     font-size: 20px;
+    color: #1f851a;
 }
 
 .btn {
@@ -199,6 +200,34 @@ p>div {
 }
 header h3 {
     color: #ffffff;
+}
+
+.a{
+    
+    text-decoration: none;
+}
+
+/* Estilos para la sección de búsqueda */
+.busqueda-section {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.busqueda-section input {
+    margin-right: 10px; /* Espacio entre el campo de búsqueda y el botón */
+}
+
+.busqueda-section button {
+    padding: 8px 15px;
+    background-color: #0e360c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
